@@ -1,0 +1,31 @@
+server:
+  port: 11000
+
+embedding:
+  api:
+    url: http://localhost:12000
+
+spring:
+  application:
+    name: SpringVectorDB
+
+  # Mongo
+  mongodb:
+    uri: mongodb+srv://jun1234755:nnxA64zlNDg9xECB@cluster0.lyypdxf.mongodb.net/myDB?retryWrites=true&w=majority&appName=Cluster0
+  # 준상이 아틀라스 디비임
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          mongodb:
+            core:
+              MongoTemplate: DEBUG
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 6000000
+        readTimeout: 6000000
